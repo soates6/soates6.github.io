@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Silly Otter | About Us</title>
+    <link rel="stylesheet" href="default.css">
+
+    <style>
+        .about-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2rem 1rem;
+        }
+
+        .about-hero {
+            position: relative;
+        }
+
+        .hero-image {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 1rem;
+        }
+
+        .about-hero h1 {
+            font-size: 3rem;
+            color: var(--primary-color);
+            padding: 0;
+        }
+
+        .about-us {
+            display: flex;
+            justify-content: center;
+        }
+
+        .mission-statement {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 4rem auto;
+        }
+
+        .mission-statement h2 {
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+            font-size: 2rem;
+        }
+
+        .mission-statement p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 768px) {
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .about-hero h1 {
+                font-size: 2rem;
+            }
+
+            .mission-statement p,
+            .contact-section p {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo"><a href="/index.html">The Silly Otter</a></div>
+    </header>
+
+    <main>
+        <div class="about-container">
+            <section class="about-hero">
+                <img src="https://c1.wallpaperflare.com/preview/323/678/410/colorful-rocks-stones-background-backdrop.jpg" alt="The Silly Otter Store Front" class="hero-image">
+                <div class="about-us">
+                    <h1>About Us</h1>
+                </div>
+            </section>
+
+            <section class="about-content">
+                <div class="mission-statement">
+                    <h2>Our Mission</h2>
+                    <p>At The Silly Otter, we believe in bringing the earth's most beautiful treasures to collectors and enthusiasts alike. Our carefully curated selection of gems and minerals represents nature's finest artistry, each piece telling its own unique story of formation and discovery.</p>
+                    <br></br>
+                    <p>"Rock solid love!"</p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p class="foot">&copy; 2025 The Silly Otter. Designed by <a href="https://webpages.charlotte.edu/soates6/itis3135/oatesenenterprises.org/" target="_blank">Oates Enterprises</a></p>
+    </footer>
+</body>
+</html>

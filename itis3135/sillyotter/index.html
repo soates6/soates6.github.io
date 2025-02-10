@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Silly Otter | Gems and Rocks</title>
+    <link rel="stylesheet" href="default.css">
+</head>
+<body>
+    <header>
+        <div class="logo"><a href="/index.html">The Silly Otter</a></div>
+    </header>
+
+    <main>
+        <h1>Gems and Rocks</h1>
+        <div class="controls">            
+            <div class="view-toggle">
+                <button onclick="setView('single')">Single Column</button>
+                <button onclick="setView('double')">Double Column</button>
+            </div>
+        </div>
+
+        <div class="products double-column" id="products-grid">
+            <div class="product-card">
+                <img src="https://www.learnreligions.com/thmb/D8rBHHy1fONE6ZEoqvnC1zQgJa4=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/gi-amethyst-points-58b9786d5f9b58af5c495a9a.jpg" alt="Amethyst Crystal" class="product-image">
+                <div class="product-info">
+                    <div class="product-name">Amethyst Crystal</div>
+                    <div class="product-price">$129.99</div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://becauseirock.com/cdn/shop/products/6.png?v=1617959885" alt="Rose Quartz" class="product-image">
+                <div class="product-info">
+                    <div class="product-name">Rose Quartz</div>
+                    <div class="product-price">$89.99</div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://cdn.shopify.com/s/files/1/0104/1383/4306/files/citrine-3201605_640.jpg?v=1585154275" alt="Citrine" class="product-image">
+                <div class="product-info">
+                    <div class="product-name">Citrine</div>
+                    <div class="product-price">$149.99</div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://www.findgemstone.com/wp-content/uploads/2024/04/What-Are-The-Benefits-of-Wearing-Black-Obsidian.jpg" alt="Black Obsidian" class="product-image">
+                <div class="product-info">
+                    <div class="product-name">Black Obsidian</div>
+                    <div class="product-price">$79.99</div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p class="foot">Learn <a href="about.html">About</a> The Silly Otter</p><br>
+        <p class="foot">&copy; 2025 The Silly Otter. Designed by <a  href="https://webpages.charlotte.edu/soates6/itis3135/oatesenenterprises.org/" target="_blank">Oates Enterprises</a></p>
+    </footer>
+
+    <script>
+        function setView(view) {
+            const grid = document.getElementById('products-grid');
+            grid.className = `products ${view}-column`;
+        }
+    </script>
+</body>
+</html>
