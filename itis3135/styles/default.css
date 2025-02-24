@@ -127,13 +127,13 @@ footer a {
     margin: 0 5px;
 }
 
-footer nav {
-    align-items: center;
-}
-
 footer a:hover {
     color: #ffffff;
     text-decoration: underline;
+}
+
+footer nav {
+    align-items: center;
 }
 
 /* Validation Links */

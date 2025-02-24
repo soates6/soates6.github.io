@@ -1,0 +1,106 @@
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+#navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #333;
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+  z-index: 1000;
+}
+
+#navbar a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  margin: 0 15px;
+}
+
+#navbar a:hover {
+  color: #ff6347;
+}
+
+/* Welcome Section */
+#welcome {
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(45deg, #118ab2, #06d6a0);
+  color: white;
+  text-align: center;
+  padding: 0 20px;
+}
+
+#logo {
+    width: 150px;
+    height: auto;
+}
+
+#welcome h1 {
+  font-size: 3rem;
+  margin: 0;
+}
+
+#welcome p {
+  font-size: 1.5rem;
+}
+
+main {
+    padding: 2rem 20rem;
+    text-align: center;
+    background-color: white;
+}
+  
+ul {
+    list-style-type: square;
+    text-align: left;
+    display: inline-block;
+}
+
+.contact {
+    padding: 2rem;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+
+/* Footer */
+footer {
+  padding: 2rem;
+  text-align: center;
+  background-color: #333;
+  color: white;
+}
+
+footer h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+footer p {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+footer a {
+    color: #118ab2;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 5px;
+}
+
+footer a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
