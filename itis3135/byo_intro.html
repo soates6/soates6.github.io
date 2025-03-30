@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BYO Intro | ITIS3135</title>
+    <link rel="stylesheet" href="styles/default.css">
+    <script src="scripts/survey.js"></script>
+</head>
+<body>
+    <header>
+        <div data-include="components/header.html"></div>
+    </header>
+    <main>
+        <h2>BYO Intro</h2>
+        <h3>Time to BYO Intro page, please fill out the form below so we can create your own page.</h3>
+        
+        <form id="introForm">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required value="">
+            </div>
+            
+            <div class="form-group">
+                <label for="mascot">Mascot/Nickname:</label>
+                <input type="text" id="mascot" name="mascot" required value="">
+            </div>
+            
+            <div class="form-group">
+                <label for="image">Image (PNG or JPG):</label>
+                <input type="file" id="image" name="image" accept=".png,.jpg,.jpeg" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="imageCaption">Image Caption:</label>
+                <input type="text" id="imageCaption" name="imageCaption" required value="">
+            </div>
+            
+            <div class="form-group">
+                <label for="personalBg">Personal Background:</label>
+                <textarea id="personalBg" name="personalBg" required></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label for="professionalBg">Professional Background:</label>
+                <textarea id="professionalBg" name="professionalBg" required></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label for="academicBg">Academic Background:</label>
+                <textarea id="academicBg" name="academicBg" required></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label for="platform">Primary Computer Platform:</label>
+                <input type="text" id="platform" name="platform" required value="">
+            </div>
+            
+            <div class="form-group">
+                <label>Courses Currently Taking:</label>
+                <div id="coursesContainer">
+                    <div class="course-entry">
+                        <input type="text" class="course" name="course1" value="" placeholder="Course name and description">
+                        <button type="button" class="delete-course" onclick="deleteCourse(this)">Delete</button>
+                    </div>
+                </div>
+                <button type="button" id="addCourse">Add Another Course</button>
+            </div>
+            
+            <div class="form-group">
+                <label for="funny">Interesting Item to Remember You By:</label>
+                <input type="text" id="funny" name="funny" value="">
+            </div>
+            
+            <div class="form-group checkbox">
+                <input type="checkbox" id="agree" name="agree" required>
+                <label for="agree">I understand that what is on this page is not password protected and I will not put anything here that I don't want publicly available.</label>
+            </div>
+            
+            <div class="form-buttons">
+                <input type="submit" value="Submit">
+                <input type="reset" value="Reset">
+            </div>
+        </form>
+        
+        <div id="introOutput" style="display: none;"></div>
+        <a href="#" id="resetForm" style="display: none;">Reset Form</a>
+    </main>
+    <footer>
+        <div data-include="components/footer.html"></div>
+    </footer>
+    <script src="scripts/HTMLInclude.min.js"></script>
+    <script>
+        document.getElementById("validation_link_html").setAttribute("href","https://validator.w3.org/check?uri=" + location.href);
+        document.getElementById("validation_link_css").setAttribute("href","https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
+    </script>
+</body>
+</html>
