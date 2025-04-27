@@ -117,6 +117,7 @@ section {
     display: flex;
     align-items: center;
     gap: 10px;
+    margin-left: -20px;
 }
 
 .logo a {
@@ -160,10 +161,18 @@ section {
 
 .mobile-menu-btn {
     display: none;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     cursor: pointer;
     color: var(--dark-color);
+    background: none;
+    border: none;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    z-index: 1100;
 }
+
 
 /* Mobile Menu */
 .mobile-menu {

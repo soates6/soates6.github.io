@@ -1,6 +1,5 @@
-// Main initialization function
-function initializeAll() {
-    // Mobile Menu Toggle
+document.addEventListener('DOMContentLoaded', function() {
+    // Mobile Menu Toggle (with null check)
     const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
     const mobileMenu = document.querySelector('.mobile-menu');
     
@@ -9,8 +8,7 @@ function initializeAll() {
         mobileMenuOverlay.className = 'mobile-menu-overlay';
         document.body.appendChild(mobileMenuOverlay);
         
-        mobileMenuBtn.addEventListener('click', function(e) {
-            e.preventDefault();
+        mobileMenuBtn.addEventListener('click', function() {
             mobileMenu.classList.toggle('active');
             mobileMenuOverlay.classList.toggle('active');
             document.body.classList.toggle('no-scroll');
@@ -21,13 +19,9 @@ function initializeAll() {
             mobileMenuOverlay.classList.remove('active');
             document.body.classList.remove('no-scroll');
         });
-
-        console.log('Mobile menu initialized successfully');
-    } else {
-        console.warn('Mobile menu elements not found');
     }
 
-    // Testimonial Slider
+    // Testimonial Slider (with null check)
     const testimonials = document.querySelectorAll('.testimonials-slider .testimonial');
     const dots = document.querySelectorAll('.slider-controls .dot');
     
@@ -51,9 +45,11 @@ function initializeAll() {
             }, 5000);
         }
 
+        // Initialize
         showTestimonial(0);
         startSlider();
 
+        // Dot click events
         dots.forEach((dot, index) => {
             dot.addEventListener('click', () => {
                 clearInterval(testimonialInterval);
@@ -62,6 +58,7 @@ function initializeAll() {
             });
         });
 
+        // Pause on hover
         const sliderContainer = document.querySelector('.testimonials-slider');
         if (sliderContainer) {
             sliderContainer.addEventListener('mouseenter', () => {
@@ -72,7 +69,7 @@ function initializeAll() {
         }
     }
 
-    // Sticky Header
+    // Sticky Header (with null check)
     const header = document.querySelector('.header');
     if (header) {
         let lastScroll = 0;
@@ -97,7 +94,7 @@ function initializeAll() {
         });
     }
 
-    // Smooth scrolling
+    // Smooth scrolling (with null check)
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             e.preventDefault();
@@ -114,17 +111,4 @@ function initializeAll() {
             }
         });
     });
-}
-
-// Handle initialization based on whether HTMLInclude is used
-if (typeof HTMLInclude !== 'undefined') {
-    // Wait for HTMLInclude to complete
-    HTMLInclude.addEventListener('complete', function() {
-        // Small delay to ensure all elements are in the DOM
-        setTimeout(initializeAll, 50);
-    });
-} else {
-    // Standard DOMContentLoaded if no HTMLInclude
-    document.addEventListener('DOMContentLoaded', initializeAll);
-}
-
+});
