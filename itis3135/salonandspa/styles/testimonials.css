@@ -1,0 +1,351 @@
+.testimonials-header {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../images/nails4.jpg') no-repeat center center/cover;
+    color: var(--white);
+    padding: 8rem 0 6rem;
+    text-align: center;
+    margin-top: 80px; /* Account for fixed header */
+}
+
+.testimonials-header h1 {
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+}
+
+.testimonials-header p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Main Content */
+.testimonials-main {
+    padding: 5rem 0 3rem;
+}
+
+/* Featured Testimonials Slider */
+.featured-testimonials {
+    margin-bottom: 5rem;
+    text-align: center;
+}
+
+.featured-testimonials h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.featured-testimonials h2::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: var(--primary-color);
+    margin: 1rem auto 0;
+}
+
+.testimonials-slider {
+    max-width: 800px;
+    margin: 0 auto 2rem;
+    position: relative;
+    min-height: 300px;
+}
+
+.testimonial {
+    display: none;
+    background: var(--white);
+    padding: 2.5rem;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.testimonial.active {
+    display: block;
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.testimonial .rating {
+    color: var(--secondary-color);
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.testimonial blockquote {
+    font-size: 1.2rem;
+    font-style: italic;
+    line-height: 1.7;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.testimonial blockquote::before,
+.testimonial blockquote::after {
+    color: var(--primary-color);
+    font-size: 3rem;
+    line-height: 1;
+    position: absolute;
+    opacity: 0.2;
+}
+
+.testimonial blockquote::before {
+    content: '\201C';
+    top: -0.5rem;
+    left: -1rem;
+}
+
+.testimonial blockquote::after {
+    content: '\201D';
+    bottom: -2.5rem;
+    right: -1rem;
+}
+
+.client-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.client-details h4 {
+    margin-bottom: 0.3rem;
+    color: var(--dark-color);
+    text-align: left;
+}
+
+.client-details span {
+    color: var(--gray);
+    font-size: 0.9rem;
+    display: block;
+    text-align: left;
+}
+
+.slider-controls {
+    display: flex;
+    justify-content: center;
+    gap: 0.8rem;
+    margin-top: 2rem;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #ccc;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.dot.active {
+    background: var(--primary-color);
+    transform: scale(1.2);
+}
+
+/* All Testimonials Grid */
+.all-testimonials {
+    margin-bottom: 4rem;
+}
+
+.all-testimonials h2 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.all-testimonials h2::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: var(--primary-color);
+    margin: 1rem auto 0;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+.testimonial-card {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-card .rating {
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+}
+
+.testimonial-card blockquote {
+    font-style: italic;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding: 0 1rem;
+}
+
+.testimonial-card blockquote::before {
+    content: '\201C';
+    color: var(--primary-color);
+    font-size: 3rem;
+    line-height: 1;
+    position: absolute;
+    top: -1rem;
+    left: -0.5rem;
+    opacity: 0.2;
+}
+
+.testimonial-card .client-info {
+    justify-content: flex-start;
+}
+
+.testimonial-card .client-info img {
+    width: 60px;
+    height: 60px;
+}
+
+/* Review CTA */
+.review-cta {
+    background: var(--light-color);
+    padding: 3rem;
+    border-radius: 8px;
+    text-align: center;
+    margin: 4rem 0;
+}
+
+.review-cta h3 {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+}
+
+.review-cta p {
+    max-width: 600px;
+    margin: 0 auto 2rem;
+}
+
+.review-cta .cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.review-cta .btn i {
+    margin-right: 0.5rem;
+}
+
+/* CTA Section */
+.testimonials-cta {
+    background: var(--primary-color);
+    color: var(--white);
+    text-align: center;
+    padding: 4rem 0;
+}
+
+.testimonials-cta h2 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+}
+
+.testimonials-cta p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.testimonials-cta .cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .testimonials-grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .testimonials-header {
+        padding: 6rem 0 4rem;
+    }
+    
+    .testimonials-header h1 {
+        font-size: 2.2rem;
+    }
+    
+    .testimonial {
+        padding: 2rem;
+    }
+    
+    .testimonial blockquote {
+        font-size: 1.1rem;
+    }
+    
+    .review-cta {
+        padding: 2rem;
+    }
+    
+    .testimonials-cta .cta-buttons,
+    .review-cta .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .testimonials-cta .btn,
+    .review-cta .btn {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 576px) {
+    .testimonials-header h1 {
+        font-size: 1.8rem;
+    }
+    
+    .testimonials-header p {
+        font-size: 1rem;
+    }
+    
+    .testimonial {
+        padding: 1.5rem;
+    }
+    
+    .client-info {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .client-info img {
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+    
+    .client-details h4,
+    .client-details span {
+        text-align: center;
+    }
+    
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+    }
+}
