@@ -1,5 +1,6 @@
-document.addEventListener('DOMContentLoaded', function() {
-    // Mobile Menu Toggle (with null check)
+// Main initialization function
+function initializeAll() {
+    // Mobile Menu Toggle
     const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
     const mobileMenu = document.querySelector('.mobile-menu');
     
@@ -8,7 +9,8 @@ document.addEventListener('DOMContentLoaded', function() {
         mobileMenuOverlay.className = 'mobile-menu-overlay';
         document.body.appendChild(mobileMenuOverlay);
         
-        mobileMenuBtn.addEventListener('click', function() {
+        mobileMenuBtn.addEventListener('click', function(e) {
+            e.preventDefault();
             mobileMenu.classList.toggle('active');
             mobileMenuOverlay.classList.toggle('active');
             document.body.classList.toggle('no-scroll');
@@ -19,9 +21,13 @@ document.addEventListener('DOMContentLoaded', function() {
             mobileMenuOverlay.classList.remove('active');
             document.body.classList.remove('no-scroll');
         });
+
+        console.log('Mobile menu initialized successfully');
+    } else {
+        console.warn('Mobile menu elements not found');
     }
 
-    // Testimonial Slider (with null check)
+    // Testimonial Slider
     const testimonials = document.querySelectorAll('.testimonials-slider .testimonial');
     const dots = document.querySelectorAll('.slider-controls .dot');
     
@@ -45,11 +51,9 @@ document.addEventListener('DOMContentLoaded', function() {
             }, 5000);
         }
 
-        // Initialize
         showTestimonial(0);
         startSlider();
 
-        // Dot click events
         dots.forEach((dot, index) => {
             dot.addEventListener('click', () => {
                 clearInterval(testimonialInterval);
@@ -58,7 +62,6 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
 
-        // Pause on hover
         const sliderContainer = document.querySelector('.testimonials-slider');
         if (sliderContainer) {
             sliderContainer.addEventListener('mouseenter', () => {
@@ -69,7 +72,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // Sticky Header (with null check)
+    // Sticky Header
     const header = document.querySelector('.header');
     if (header) {
         let lastScroll = 0;
@@ -94,7 +97,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Smooth scrolling (with null check)
+    // Smooth scrolling
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             e.preventDefault();
@@ -111,4 +114,18 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
-});
+}
+
+
+
+// Handle initialization based on whether HTMLInclude is used
+if (typeof HTMLInclude !== 'undefined') {
+    // Wait for HTMLInclude to complete
+    HTMLInclude.addEventListener('complete', function() {
+        // Small delay to ensure all elements are in the DOM
+        setTimeout(initializeAll, 50);
+    });
+} else {
+    // Standard DOMContentLoaded if no HTMLInclude
+    document.addEventListener('DOMContentLoaded', initializeAll);
+}
