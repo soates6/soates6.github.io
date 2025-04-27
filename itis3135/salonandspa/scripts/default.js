@@ -116,8 +116,6 @@ function initializeAll() {
     });
 }
 
-
-
 // Handle initialization based on whether HTMLInclude is used
 if (typeof HTMLInclude !== 'undefined') {
     // Wait for HTMLInclude to complete
@@ -129,3 +127,4 @@ if (typeof HTMLInclude !== 'undefined') {
     // Standard DOMContentLoaded if no HTMLInclude
     document.addEventListener('DOMContentLoaded', initializeAll);
 }
+

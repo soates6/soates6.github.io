@@ -26,11 +26,11 @@
 }
 
 .contact-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    justify-content: center;
     gap: 3rem;
 }
-
+/* 
 .contact-form {
     background: var(--white);
     padding: 2.5rem;
@@ -96,7 +96,7 @@
     width: 100%;
     padding: 1rem;
     font-size: 1.1rem;
-}
+} */
 
 .contact-info h2 {
     font-size: 1.8rem;
